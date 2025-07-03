@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galería de Videos</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <header>
+    <button class="toggle-button" onclick="toggleTheme()">🌙 Alternar tema</button>
+    <h1>🎬 Mi Galería de Videos</h1>
+    <p>Descubre contenido útil e inspirador</p>
+  </header>
+
+  <div class="filters">
+    <button onclick="filtrarCategoria('todos')">Todos</button>
+    <button onclick="filtrarCategoria('Tutorial')">Tutoriales</button>
+    <button onclick="filtrarCategoria('Creatividad')">Creatividad</button>
+  </div>
+
+  <div class="gallery" id="gallery"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
