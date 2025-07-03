@@ -1,5 +1,4 @@
-const API_URL = "https://corsproxy.io/?https://script.google.com/macros/s/AKfycbzIr1tjqznLoZo2n4TguleaUkotctSeOQBkk6HsnuCE3s2P2sQxv18dDCyIzMhVJJLt/exec";
-
+const API_URL = "https://corsproxy.io/?url=https://script.google.com/macros/s/AKfycbzIr1tjqznLoZo2n4TguleaUkotctSeOQBkk6HsnuCE3s2P2sQxv18dDCyIzMhVJJLt/exec";
 
 let todosLosVideos = [];
 
