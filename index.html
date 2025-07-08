@@ -2,15 +2,15 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Galería de Videos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galería Firebase</title>
   <link rel="stylesheet" href="estilos.css" />
 </head>
 <body>
   <header>
-    <button class="toggle-button" onclick="toggleTheme()">🌙 Alternar tema</button>
-    <h1>🎬 Mi Galería de Videos</h1>
-    <p>Descubre contenido útil e inspirador</p>
+    <button class="toggle-button" onclick="toggleTheme()">🌙 Tema</button>
+    <h1>🎬 Galería de Videos</h1>
+    <p>Usando Firebase Firestore</p>
   </header>
 
   <div class="filters">
@@ -24,26 +24,18 @@
   <section class="video-form">
     <h2>📤 Agregar un video</h2>
     <form id="formularioVideo">
-      <label for="url">URL del video de YouTube:</label>
-      <input type="url" id="url" name="url" placeholder="https://www.youtube.com/watch?v=..." required />
-      
-      <label for="titulo">Título:</label>
-      <input type="text" id="titulo" name="titulo" placeholder="Título del video" required />
-
-      <label for="texto">Descripción:</label>
-      <input type="text" id="texto" name="texto" placeholder="Descripción corta" required />
-
-      <label for="categoria">Categoría:</label>
-      <select id="categoria" name="categoria">
+      <input type="url" id="url" placeholder="URL de YouTube" required />
+      <input type="text" id="titulo" placeholder="Título" required />
+      <input type="text" id="texto" placeholder="Descripción" required />
+      <select id="categoria">
         <option value="Tutorial">Tutorial</option>
         <option value="Creatividad">Creatividad</option>
       </select>
-
-      <button type="submit">📥 Enviar</button>
+      <button type="submit">Enviar</button>
     </form>
     <div id="formFeedback"></div>
   </section>
 
-  <script src="app.js"></script>
+  <script type="module" src="app_firebase.js"></script>
 </body>
 </html>
