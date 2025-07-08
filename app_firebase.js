@@ -44,6 +44,7 @@ async function cargarVideos() {
   try {
     const snap = await getDocs(collection(db, "videos"));
     todosLosVideos = snap.docs.map(doc => doc.data());
+	console.log("Videos cargados:", todosLosVideos);
     mostrarVideos(todosLosVideos);
   } catch (err) {
     console.error("Error:", err);
