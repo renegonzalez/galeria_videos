@@ -1,0 +1,263 @@
+.video-btns {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  z-index: 2;
+}
+
+.video-btns button {
+  background: var(--color-primary);
+  color: #fff;
+  border: 2px solid var(--color-primary);
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+.video-btns button:focus, .video-btns button:hover {
+  background: #fff;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  outline: 2px solid var(--color-primary);
+}
+
+@media (max-width: 600px) {
+  .video-btns {
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+    margin-top: 12px;
+  }
+  .video-btns button {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 14px 0;
+    min-height: 44px;
+  }
+}
+:root {
+  --color-bg: #fdfdfd;
+  --color-card: #ffffff;
+  --color-border: #e0e0e0;
+  --color-primary: #c62828;
+  --color-text: #333;
+  --color-header: #111827;
+}
+
+body.dark {
+  --color-bg: #121212;
+  --color-card: #1e1e1e;
+  --color-border: #333;
+  --color-primary: #ef5350;
+  --color-text: #e0e0e0;
+  --color-header: #f9fafb;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  background-color: var(--color-bg);
+  margin: 0;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: var(--color-header);
+  margin-bottom: 8px;
+}
+
+header p {
+  color: var(--color-text);
+  opacity: 0.8;
+}
+
+
+.toggle-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 12px 20px; /* Larger touch target */
+  border: 1.5px solid var(--color-border);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--color-text);
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.toggle-button:focus, .toggle-button:hover {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  background: var(--color-border);
+  border-color: var(--color-primary);
+}
+
+.filters {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.filters button {
+  margin: 0 8px;
+  padding: 12px 20px; /* Larger touch target */
+  background-color: var(--color-card);
+  border: 1.5px solid var(--color-border);
+  border-radius: 8px;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.2s;
+  font-size: 1rem;
+}
+
+.filters button:focus, .filters button:hover {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  background-color: var(--color-border);
+  border-color: var(--color-primary);
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+
+.video {
+  flex: 1 1 280px;
+  max-width: 320px;
+  background-color: var(--color-card);
+  border: 1.5px solid var(--color-border);
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+  overflow: hidden;
+  transition: transform 0.2s, border-color 0.2s;
+  margin-bottom: 56px;
+}
+
+.video:focus-within, .video:hover {
+  transform: translateY(-4px) scale(1.02);
+  border-color: var(--color-primary);
+}
+
+.video img {
+  width: 100%;
+  display: block;
+}
+
+.video-content {
+  padding: 16px;
+}
+
+
+.video a {
+  text-decoration: none;
+  color: var(--color-primary);
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.video a:focus, .video a:hover {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  text-decoration: underline;
+}
+
+.video-title {
+  color: var(--color-text);
+  font-size: 15px;
+  margin-top: 6px;
+}
+
+input, select, button, textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1.5px solid var(--color-border);
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  background: var(--color-card);
+  color: var(--color-text);
+  transition: border-color 0.2s;
+}
+
+input:focus, select:focus, textarea:focus, button:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-color: var(--color-primary);
+}
+
+label {
+  font-weight: 600;
+  color: var(--color-header);
+  margin-bottom: 4px;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .gallery {
+    gap: 16px;
+  }
+  .video {
+    max-width: 45vw;
+  }
+  .video img {
+    max-height: 180px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 16px 2vw;
+  }
+  header h1 {
+    font-size: 1.5rem;
+  }
+  .gallery {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .video {
+    max-width: 100%;
+    min-width: 0;
+    border-radius: 10px;
+    margin-bottom: 80px;
+  }
+  .video-content {
+    padding: 10px;
+  }
+  .filters button, .toggle-button {
+    padding: 10px 12px;
+    font-size: 0.95rem;
+  }
+  input, select, button, textarea {
+    font-size: 0.98rem;
+    padding: 8px 8px;
+  }
+  .video-btns {
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+    margin-top: 12px;
+  }
+  .video-btns button {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 14px 0;
+    min-height: 44px;
+  }
+}
